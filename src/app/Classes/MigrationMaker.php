@@ -29,10 +29,10 @@ abstract class MigrationMaker
 
     protected function setMigrationClassName()
     {
-    	$stripped = preg_replace('/\PL/u', '', $this->model->name);
+        $stripped = preg_replace('/\PL/u', '', $this->model->name);
 
         $this->migrationClass =
-        	$this->action.ucfirst($stripped).class_basename($this->modelClass);
+            $this->action.ucfirst($stripped).class_basename($this->modelClass);
     }
 
     protected function adjustNameIfMigrationExists()
@@ -59,7 +59,7 @@ abstract class MigrationMaker
     protected function setMigrationName()
     {
         $this->migrationName =
-        	Carbon::now()->format('Y_m_d_His').'_'.snake_case($this->migrationClass).'.php';
+            Carbon::now()->format('Y_m_d_His').'_'.snake_case($this->migrationClass).'.php';
     }
 
     protected function writeMigration()
@@ -83,8 +83,8 @@ abstract class MigrationMaker
         $modelString = $this->convertToString($this->getStrippedModelArray($this->model->toArray()));
 
         return [
-            'MigrationClass' => $this->migrationClass,
-            'ModelClass' => $this->modelClass,
+            'MigrationClass'        => $this->migrationClass,
+            'ModelClass'            => $this->modelClass,
             'private $model = null' => 'private $model = '.$modelString,
         ];
     }
@@ -127,7 +127,7 @@ abstract class MigrationMaker
         \DB::table('migrations')
             ->insert([
                 'migration' => substr($this->migrationName, 0, -4),
-                'batch' => $batch + 1,
+                'batch'     => $batch + 1,
             ]);
     }
 }

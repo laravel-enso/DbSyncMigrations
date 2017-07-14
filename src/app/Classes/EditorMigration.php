@@ -3,7 +3,6 @@
 namespace LaravelEnso\ModelTrackingMigrations\app\Classes;
 
 use Illuminate\Database\Eloquent\Model;
-use LaravelEnso\ModelTrackingMigrations\app\Classes\MigrationMaker;
 
 class EditorMigration extends MigrationMaker
 {
@@ -30,10 +29,10 @@ class EditorMigration extends MigrationMaker
         $to = $this->convertToString($this->getStrippedModelArray($this->to->toArray()));
 
         return [
-            'MigrationClass' => $this->migrationClass,
-            'ModelClass' => $this->modelClass,
+            'MigrationClass'       => $this->migrationClass,
+            'ModelClass'           => $this->modelClass,
             'private $from = null' => 'private $from = '.$from,
-            'private $to = null' => 'private $to = '.$to,
+            'private $to = null'   => 'private $to = '.$to,
         ];
     }
 }
