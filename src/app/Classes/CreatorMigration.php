@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelEnso\ModelTrackingMigrations\app\Classes;
+namespace LaravelEnso\DbSyncMigrations\app\Classes;
 
 class CreatorMigration extends MigrationMaker
 {

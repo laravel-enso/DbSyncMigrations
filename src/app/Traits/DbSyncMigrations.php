@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelEnso\ModelTrackingMigrations\app\Traits;
+namespace LaravelEnso\DbSyncMigrations\app\Traits;
 
-use LaravelEnso\ModelTrackingMigrations\app\Classes\CreatorMigration;
-use LaravelEnso\ModelTrackingMigrations\app\Classes\DestroyerMigration;
-use LaravelEnso\ModelTrackingMigrations\app\Classes\EditorMigration;
+use LaravelEnso\DbSyncMigrations\app\Classes\CreatorMigration;
+use LaravelEnso\DbSyncMigrations\app\Classes\DestroyerMigration;
+use LaravelEnso\DbSyncMigrations\app\Classes\EditorMigration;
 
 trait DbSyncMigrations
 {
