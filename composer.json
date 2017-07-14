@@ -1,6 +1,6 @@
 {
     "name": "laravel-enso/dbsyncmigrations",
-    "description": "Add the ability to easily sync models life cycles between development and production",
+    "description": "Add to your Laravel project the ability to easily sync models' life cycles between development and production",
     "keywords": [
         "laravel-enso",
         "db-sync-migrations",
