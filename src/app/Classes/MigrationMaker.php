@@ -29,10 +29,11 @@ abstract class MigrationMaker
 
     protected function setMigrationClassName()
     {
-        $stripped = preg_replace('/\PL/u', '', $this->model->name);
+        $this->model->name = str_replace('.', '_', $this->model->name);
+        $stripped = preg_replace("/[^\w]+/", "", $this->model->name);
 
         $this->migrationClass =
-            $this->action.ucfirst($stripped).class_basename($this->modelClass);
+            $this->action.studly_case($stripped).class_basename($this->modelClass);
     }
 
     protected function adjustNameIfMigrationExists()
