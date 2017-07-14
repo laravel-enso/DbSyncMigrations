@@ -29,8 +29,8 @@ abstract class MigrationMaker
 
     protected function setMigrationClassName()
     {
-        $this->model->name = str_replace('.', '_', $this->model->name);
-        $stripped = preg_replace("/[^\w]+/", "", $this->model->name);
+        $modelName = str_replace('.', '_', $this->model->name);
+        $stripped = preg_replace("/[^\w]+/", "", $modelName);
 
         $this->migrationClass =
             $this->action.studly_case($stripped).class_basename($this->modelClass);
