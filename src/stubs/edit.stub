@@ -1,0 +1,22 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+class MigrationClass extends Migration
+{
+	private $from = null;
+
+	private $to = null;
+
+	public function up()
+	{
+		ModelClass::whereId($this->from['id'])
+			->update($this->to);
+	}
+
+	public function down()
+	{
+		ModelClass::whereId($this->to['id'])
+			->update($this->from);
+	}
+}

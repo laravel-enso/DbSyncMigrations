@@ -1,0 +1,19 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+class MigrationClass extends Migration
+{
+	private $model = null;
+
+	public function up()
+	{
+		ModelClass::insert($this->model);
+	}
+
+	public function down()
+	{
+		ModelClass::whereId($this->model['id'])
+			->delete();
+	}
+}

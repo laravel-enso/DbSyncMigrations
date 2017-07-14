@@ -1,0 +1,30 @@
+{
+    "name": "laravel-enso/dbsyncmigrations",
+    "description": "Add the ability to easily sync models life cycles between development and production",
+    "keywords": [
+        "laravel-enso",
+        "db-sync-migrations",
+        "db-sync",
+        "sync-migrations"
+    ],
+    "homepage": "https://github.com/laravel-enso/DbSyncMigrations",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Ocneanu",
+            "email": "aocneanu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/framework": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEnso\\DbSyncMigrations\\": "src/"
+        }
+    }
+}
