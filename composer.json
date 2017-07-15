@@ -26,5 +26,13 @@
         "psr-4": {
             "LaravelEnso\\DbSyncMigrations\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelEnso\\DbSyncMigrations\\DbSyncServiceProvider"
+            ],
+            "aliases": {}
+        }
     }
 }
