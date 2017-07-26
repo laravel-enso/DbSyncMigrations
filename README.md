@@ -7,13 +7,20 @@
 [![Latest Stable Version](https://poser.pugx.org/laravel-enso/dbsyncmigrations/version)](https://packagist.org/packages/laravel-enso/dbsyncmigrations)
 <!--/h-->
 
-Adds the ability to easily sync your model's DB states between development and production
+Database synchornization migrations-generator for [Laravel](http://www.laravel.com).
 
-### Details
+### Features
 
-By adding the `DbSyncMigrations` trait to your models, you'll have atomatically generated migrations for the changes you make to your models.
+Adds the ability to easily sync your model's DB states between development and production, by:
+- generating migrations for the models you choose, and then by
+- running the generated migrations on your other systems (staging/live/etc.)
 
-You may globally disable the migration creation by editing the `dbsync.php` config file and setting `dbsync` to false
+### Installation Steps
+
+1. Add `LaravelEnso\DbSyncMigrations\DbSyncServiceProvider::class` to `config/app.php`
+2. Add the `DbSyncMigrations` trait to models you want migrations for
+
+**NOTE** You may globally disable the migration creation by editing the `config/dbsync.php` config file and setting the `dbsync` flag to false
 
 ### Notes
 
