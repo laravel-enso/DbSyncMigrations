@@ -19,8 +19,10 @@ class EditorMigration extends MigrationMaker
 
     protected function setMigrationClassName()
     {
+        $to = str_replace('.', '_', $this->to->name);
+        $stripped = preg_replace("/[^\w]+/", '', $to);
         $this->migrationClass =
-            $this->action.studly_case($this->to->name).class_basename($this->modelClass);
+            $this->action.studly_case($stripped).class_basename($this->modelClass);
     }
 
     protected function getReplaceArray()
