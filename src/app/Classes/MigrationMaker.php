@@ -67,7 +67,6 @@ abstract class MigrationMaker
     {
         $migration = $this->populateStub();
         $path = database_path('migrations').DIRECTORY_SEPARATOR.$this->migrationName;
-
         \File::put($path, $migration);
     }
 
@@ -125,8 +124,7 @@ abstract class MigrationMaker
             ->first(['batch'])
             ->batch;
 
-        \DB::table('migrations')
-            ->insert([
+        \DB::table('migrations')->insert([
                 'migration' => substr($this->migrationName, 0, -4),
                 'batch'     => $batch + 1,
             ]);

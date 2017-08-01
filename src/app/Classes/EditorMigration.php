@@ -28,7 +28,12 @@ class EditorMigration extends MigrationMaker
     protected function getReplaceArray()
     {
         $from = $this->convertToString($this->from);
-        $to = $this->convertToString($this->getStrippedModelArray($this->to->toArray()));
+
+        $to = $this->convertToString(
+            $this->getStrippedModelArray(
+                $this->to->toArray()
+            )
+        );
 
         return [
             'MigrationClass'       => $this->migrationClass,
