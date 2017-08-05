@@ -10,7 +10,7 @@ trait DbSyncMigrations
 {
     protected static function bootDbSyncMigrations()
     {
-        if (!config('dbsync.dbsync') || config('app.env') == 'testing') {
+        if (!config('dbsync.dbsync') || config('app.env') !== 'local') {
             return false;
         }
 
