@@ -1,6 +1,6 @@
 {
     "name": "laravel-enso/dbsyncmigrations",
-    "description": "Database synchornization migrations-generator for Laravel",
+    "description": "Database synchronization migrations-generator for Laravel",
     "keywords": [
         "laravel-enso",
         "db-sync-migrations",
