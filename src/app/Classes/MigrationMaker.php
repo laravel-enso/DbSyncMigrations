@@ -50,7 +50,8 @@ abstract class MigrationMaker
         $migrations = \File::files(database_path('migrations'));
 
         foreach ($migrations as &$migration) {
-            $array = explode('/', $migration);
+            $filePath = $migration->getRealPath();
+            $array = explode('/', $filePath);
             $migration = substr(array_pop($array), 18, -4);
         }
 
