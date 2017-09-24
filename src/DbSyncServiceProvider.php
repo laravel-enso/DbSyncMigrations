@@ -9,14 +9,14 @@ class DbSyncServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config' => config_path(),
+            __DIR__.'/config' => config_path('enso'),
         ], 'dbsync-config');
 
         $this->publishes([
-            __DIR__.'/config' => config_path(),
+            __DIR__.'/config' => config_path('enso'),
         ], 'enso-config');
 
-        $this->mergeConfigFrom(__DIR__.'/config/dbsync.php', 'dbsync');
+        $this->mergeConfigFrom(__DIR__.'/config/dbsync.php', 'enso.dbsync');
     }
 
     public function register()
