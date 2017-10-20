@@ -7,7 +7,7 @@
 [![Latest Stable Version](https://poser.pugx.org/laravel-enso/dbsyncmigrations/version)](https://packagist.org/packages/laravel-enso/dbsyncmigrations)
 <!--/h-->
 
-Database synchornization migrations-generator for [Laravel](http://www.laravel.com).
+Database synchronization migrations-generator for [Laravel](http://www.laravel.com).
 
 ### Features
 
@@ -17,19 +17,24 @@ Adds the ability to easily sync your model's DB states between development and p
 
 ### Installation Steps
 
-1. Add `LaravelEnso\DbSyncMigrations\DbSyncServiceProvider::class` to `config/app.php`
+1. Publish the configuration file
+    ```
+    php artisan vendor:publish --tag=dbsync-config`
+    ``` 
 2. Add the `DbSyncMigrations` trait to models you want migrations for
 
-**NOTE** You may globally disable the migration creation by editing the `config/dbsync.php` config file and setting the `dbsync` flag to false
+**NOTE** You may globally disable the migration creation by editing the `config/enso/dbsync.php` config file and setting the `dbsync` flag to false
+
+### Publishes
+
+- `php artisan vendor:publish --tag=dbsync-config` - configuration file
+- `php artisan vendor:publish --tag=enso-config` - a common alias for when wanting to update the config,
+once a newer version is released
 
 ### Notes
 
 The [Laravel Enso Core](https://github.com/laravel-enso/Core) package comes with this package included.
 
-### Publishes
-- `php artisan vendor:publish --tag=dbsync-config` - configuration file
-- `php artisan vendor:publish --tag=enso-config` - a common alias for when wanting to update the config,
-once a newer version is released
 
 <!--h-->
 ### Contributions
