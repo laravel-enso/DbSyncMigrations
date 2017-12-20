@@ -36,10 +36,10 @@ class EditorMigration extends MigrationMaker
         );
 
         return [
-            'MigrationClass'       => $this->migrationClass,
-            'ModelClass'           => $this->modelClass,
+            'MigrationClass' => $this->migrationClass,
+            'ModelClass' => $this->modelClass,
             'private $from = null' => 'private $from = '.$from,
-            'private $to = null'   => 'private $to = '.$to,
+            'private $to = null' => 'private $to = '.$to,
         ];
     }
 }

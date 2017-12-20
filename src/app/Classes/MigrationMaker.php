@@ -84,8 +84,8 @@ abstract class MigrationMaker
         $modelString = $this->convertToString($this->getStrippedModelArray($this->model->toArray()));
 
         return [
-            'MigrationClass'        => $this->migrationClass,
-            'ModelClass'            => $this->modelClass,
+            'MigrationClass' => $this->migrationClass,
+            'ModelClass' => $this->modelClass,
             'private $model = null' => 'private $model = '.$modelString,
         ];
     }
@@ -127,7 +127,7 @@ abstract class MigrationMaker
 
         \DB::table('migrations')->insert([
                 'migration' => substr($this->migrationName, 0, -4),
-                'batch'     => $batch + 1,
+                'batch' => $batch + 1,
             ]);
     }
 }
