@@ -4,7 +4,7 @@ namespace LaravelEnso\DbSyncMigrations;
 
 use Illuminate\Support\ServiceProvider;
 
-class DbSyncServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {

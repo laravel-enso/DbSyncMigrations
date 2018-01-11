@@ -31,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelEnso\\DbSyncMigrations\\DbSyncServiceProvider"
+                "LaravelEnso\\DbSyncMigrations\\AppServiceProvider"
             ],
             "aliases": {}
         }
